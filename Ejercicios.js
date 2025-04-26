@@ -51,7 +51,7 @@ const imprimirConRetraso = (array) => {
 
 
 const array3 = ["the", "end", "is", "near"];
-imprimirConRetraso(array3);
+
 
 /*Ejercicio 4
 Operación con Callback
