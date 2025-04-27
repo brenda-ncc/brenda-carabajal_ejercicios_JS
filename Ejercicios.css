@@ -36,6 +36,30 @@ button:hover {
 }
 
 
+
+btnEliminar {  
+    background-color: #b30f35;
+    color: white;
+    border: 1px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+btnEliminar:hover {
+    background-color: #e37a7a;
+}
+
+
+
+#lista7 li {
+    margin-bottom: 10px; /
+  }
+
+
 #contador {
     font-size: 1.5em;
     margin: 10px 0;

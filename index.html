@@ -42,32 +42,30 @@
     <div class="ejercicio">
         <h2>5. Contador con Botones</h2>
         <div id="contador">0</div><br>
-        <button id="btnIncrementar">Incrementar</button>
-        <button id="btnDecrementar">Decrementar</button>
+        <button onclick="incrementar()">Incrementar</button>
+        <button onclick="decrementar()">Decrementar</button>
+        <!-- <button id="btnIncrementar">Incrementar</button>
+        <button id="btnDecrementar">Decrementar</button> -->
     </div>
 
     <!-- Ejercicio 6 -->
     <div class="ejercicio">
         <h2>6. Cambiar Texto de Párrafos</h2>
-        <p class="parrafo">Parrafo 1</p>
-        <p class="parrafo">Parrafo 2</p>
-        <p class="parrafo">Parrafo 3</p>
-        <button id="btnCambiarTexto">Cambiar Texto</button>
-    </div>
+        <p class="ej6" data-original="I used to float, now I just fall down">I used to float, now I just fall down</p>
+        <p class="ej6" data-original="I used to know, but I'm not sure now">I used to know, but I'm not sure now</p>
+        <p class="ej6" data-original="What was I made for?">What was I made for?</p>
+        <button onclick="cambiarTexto()">Traducir</button>
+        <button onclick="revertirTexto()">Revertir</button>
+      </div>
 
-    <!-- Ejercicio 7 -->
+    <!-- Ejercicio 7 + 8 -->
     <div class="ejercicio">
-        <h2>7. Lista con Elementos</h2>
-        <ul id="lista"></ul>
-        <button id="btnAgregarItem">Agregar Elemento</button>
-    </div>
+        <h2>7. Lista con Elementos + 8. Eliminar</h2>
+        <ul id="lista7"></ul>
+        <button onclick="agregarItem()">Agregar Elemento</button>
+      </div>
 
-<!-- Ejercicio 8 -->
-<div class="ejercicio">
-    <h2>8. Eliminar Elementos de una Lista</h2>
-    <ul id="lista"></ul>
-    <button id="btnEliminarItem">Eliminar Elemento</button>
-</div>
+
 
     <script src="Ejercicios.js"></script>
 </body>

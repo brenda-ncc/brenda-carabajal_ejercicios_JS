@@ -83,34 +83,69 @@ en un elemento div. Actualizar el texto del div al hacer click.*/
 let contador = 0;
 const elementoContador = document.getElementById('contador');
 
-function iniciarContador() {
-    contador = parseInt(document.getElementById('valorInicial').value) || 0;
-    elementoContador.textContent = contador;
+function incrementar() {
+  contador++;
+  elementoContador.textContent = contador;
 }
 
-document.getElementById('btnIncrementar').addEventListener('click', () => {
-    contador++;
-    elementoContador.textContent = contador;
-});
-
-document.getElementById('btnDecrementar').addEventListener('click', () => {
-    contador--;
-    elementoContador.textContent = contador;
-});
+function decrementar() {
+  contador--;
+  elementoContador.textContent = contador;
+}
 
 /*Ejercicio 6
 Cambiar Texto de Párrafos
 Seleccionar todos los elementos p de la página y cambiar su texto al hacer
 click en un botón.*/
 
+function traducir(elemento) {
+  elemento.textContent = 'Miau miau miau miau miau miau';
+}
+
+function cambiarTexto() {
+  document.querySelectorAll('.ej6').forEach(traducir);
+}
+
+function revertirTexto() {
+  document.querySelectorAll('.ej6').forEach(elemento => {
+    elemento.textContent = elemento.dataset.original;
+  });
+}
+
 
 /*Ejercicio 7
 Agregar Elementos a una Lista
 Crear una lista desordenada vacía y un botón. Al hacer click en el
 botón, agregar un nuevo elemento a la lista con un número que se
-incremente automáticamente.*/
-
-/*Ejercicio 8
+incremente automáticamente.
+Ejercicio 8
 Eliminar Elementos de una Lista
 Modificar el ejercicio anterior para que cada elemento generado tenga un botón
 de "Eliminar" que borre solo ese elemento de la lista.*/
+
+let cont7 = 1;
+
+function agregarItem() {
+  const lista = document.getElementById('lista7'); //lista
+  const nuevoItem = document.createElement('li'); // item
+  const botonEliminar = document.createElement('btnEliminar'); //eliminar
+
+  //agregar
+  nuevoItem.textContent = `Item ${cont7}`; 
+  lista.appendChild(nuevoItem);
+  cont7++;
+
+  //eliminar
+  botonEliminar.textContent = 'Eliminar'; 
+
+  botonEliminar.addEventListener('click', function() { //funcionalidad dentro de eliminar
+    const listItemToRemove = this.parentNode;
+    lista.removeChild(listItemToRemove);
+  });
+
+  nuevoItem.appendChild(botonEliminar); 
+ 
+}
+
+
+
